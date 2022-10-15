@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Start Of Typing Speed Test Game -->
+    <h1> <mark>Typing Speed Test Game</mark></h1>
+
+    <div class="game">
+        <div class="all-content">
+            <div class="game-name">
+                <p>type speed testing game</p>
+                <p class="music"> you can play music</p>
+                <span> 
+                        <audio controls  class="aud">
+                            <source src="media/SQUID GAME- Pink Soldiers (RemixManiacs Trap Remix).mp4">
+                        </audio>
+                    </span>
+            </div>
+
+            <div class="container">
+                <div class="message">
+                    you are playing in <span class="lvl"></span> level & you have <span class="seconds"></span> Seconds to type the word
+                </div>
+                <div class="thelvl">
+                    <label for="chose" class="lbl"> choose the level</label>
+                    <select class="choose" id="chose"> 
+                        <option selected > Normal</option>
+                        <option > Easy</option>
+                        <option> Hard</option>
+                    </select>
+                </div>
+                <div class="start"> Sart Game</div>
+
+                <div class="word">hello player !</div>
+                <input type="text" class="input">
+                <div class="upcoming-words">
+
+                </div>
+                <div class="control">
+                    <div class="time">time left is <span></span> seconds </div>
+                    <div class="score"> score:<span class="got">0</span> from <span class="total"></span></div>
+                </div>
+                <div class="finish">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Of Typing Speed Test Game -->
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

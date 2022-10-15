@@ -1,0 +1,250 @@
+:root {
+    --main-color: #00a8ff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+
+/*
+
+- Type Speeding Testing Game
+
+*/
+
+.game {
+    margin: auto;
+    background-color: #f5e7d186;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-image: url('../media/360_F_247855947_b6EekIu46gD63qTTVoUhs7GGVDY46fbY.jpg');
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 93vh;
+    position: relative;
+}
+
+.all-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game-name {
+    padding: 5px 0;
+    background-color: var(--main-color);
+    opacity: .6;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.game-name p:first-of-type {
+    font-size: 30px;
+    text-shadow: 9px 12px 20px black;
+}
+
+.game-name .music {
+    font-size: 15px;
+    color: red;
+    padding-left: 20px;
+    /* animation-direction: alternate من الخواص الممتازه للانيميشين و الى هى الانيميشين دايركشن (الترنييت) و الى بتخلى ميحصلش فصل عند كل مره بيتكرر فيها الانيميشين و بتبان جداً فى المثال و هو بيطبق */
+    animation: MOVING infinite 2s linear alternate;
+    transform-style: preserve-3d;
+}
+
+@keyframes MOVING {
+    0% {
+        transform: scale(.5);
+        letter-spacing: normal;
+    }
+    25% {
+        transform: scale(1) translateY(20px);
+        color: rgb(139, 12, 80);
+        letter-spacing: 5px;
+    }
+    50% {
+        transform: scale(1.1) translateY(-20px);
+        color: rgb(139, 12, 80);
+        letter-spacing: 5px;
+    }
+    100% {
+        transform: scale(1.2);
+        letter-spacing: normal;
+    }
+}
+
+.game-name span {
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
+.game-name span audio {
+    width: 160px;
+    background-color: #4caf50;
+    border: 3px solid #559857;
+    border-radius: 10px;
+    display: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.message {
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 6px;
+    margin: 15px 0;
+    color: initial;
+}
+
+.message span {
+    font-weight: bold;
+    color: rgb(46, 160, 122);
+}
+
+.message span::before {
+    content: '[ ';
+}
+
+.message span::after {
+    content: ' ]';
+}
+
+.thelvl {
+    background-color: rgb(156, 241, 213);
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.lbl {
+    color: initial;
+    padding-right: 10px;
+}
+
+.choose {
+    background-color: #7ec5e9;
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 15px;
+}
+
+.choose:hover {
+    background-color: rgb(243, 206, 86);
+}
+
+.start {
+    font-weight: bold;
+    background-color: rgb(11, 118, 189);
+    color: white;
+    padding: 20px 0;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.word {
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    user-select: none;
+    padding: 20px 0;
+    color: var(--main-color);
+    filter: brightness(200%);
+}
+
+.input {
+    width: 100%;
+    border: 2px solid var(--main-color);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 20px;
+    display: block;
+    text-transform: capitalize;
+    caret-color: var(--main-color);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.upcoming-words {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    background-color: white;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.upcoming-words div {
+    margin: 3px 2px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.control span {
+    color: rgb(70, 131, 110);
+}
+
+.finish {
+    font-weight: bold;
+    font-size: 40px;
+    padding: 15px 0;
+    transform-style: preserve-3d;
+    perspective: 600px;
+}
+
+.finish .good {
+    color: var(--main-color);
+}
+
+.finish .bad {
+    color: red;
+}
+
+.finish button {
+    font-size: 15px;
+    border-radius: 15px;
+    transition: all 0.6s linear;
+    color: black;
+    font-weight: bold;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    outline: none;
+    background: var(--main-color);
+}
+
+.finish:hover button {
+    background: rgb(231, 74, 74);
+    /* transform: rotateY(360deg); */
+    letter-spacing: 10px;
+}
