@@ -248,3 +248,12 @@ h1 {
     /* transform: rotateY(360deg); */
     letter-spacing: 10px;
 }
+
+@media screen and (max-width:425px) {
+    .all-content {
+        width: 95%;
+    }
+    .game-name p:first-of-type {
+        font-size: 25px;
+    }
+}
