@@ -190,10 +190,12 @@ function play() {
 let audiooo = document.querySelector(".aud");
 let para = document.querySelector(".music");
 let gname = document.querySelector(".game-name");
-para.onmouseenter = function() {
+gname.addEventListener('mouseenter', () => {
     para.style.display = "none";
     audiooo.style.display = "inline-block";
     // gname.style.cssText = "background:transparent;color:red";
-};
+})
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
